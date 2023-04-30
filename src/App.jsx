@@ -11,7 +11,9 @@ function App() {
   
 
   function addNote() {
-    console.log('clickded')
+    setnotesData((prevnotesData) => {
+      return [...prevnotesData, `Note ${prevnotesData.length + 1}`]
+    })
   }
 
   return (
