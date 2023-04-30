@@ -2,6 +2,7 @@ import React from 'react'
 import Split from 'react-split';
 
 import Notes from './Notes';
+import Editor from './Editor';
 import './App.css'
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         notesData={notesData}
         addNote={addNote}
         />
-        <div className='panel--2'>Panel 2</div>
+       <Editor />
       </Split>
 
     </div>
