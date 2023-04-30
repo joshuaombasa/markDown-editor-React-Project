@@ -1,8 +1,12 @@
+import React from "react"
+
+import Fault from "./Fault"
+
 
 export default function Notes(props) {
 
     const notesJsx = props.notesData.map((note) => {
-        return <p key={`${note}${note.length}`}>{note}</p>
+        return <Fault key={`${note}${note.length}`} />
     })
 
 
