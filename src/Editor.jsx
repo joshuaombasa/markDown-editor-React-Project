@@ -1,30 +1,7 @@
 import React from "react";
 
-export default function Editor() {
+export default function Editor({faultData, setfaultData, handleChange, submitForm}) {
 
-    const [faultData, setfaultData] = React.useState(
-        {
-            faultheader: '',
-            faultdecsription: ''
-        }
-    )
-
-    function handleChange(event) {
-        const {name, value} = event.target
-        setfaultData((prevfaultData) => {
-            return {
-                ...prevfaultData,
-                [name] : value
-            }
-        })
-    }
-
-    
-
-    function submitForm(event) {
-        event.preventDefault() 
-        console.log(faultData)
-    }
 
     return (
         <section className="editor--container">
