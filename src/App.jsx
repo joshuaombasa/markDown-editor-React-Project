@@ -9,7 +9,27 @@ function App() {
 
   const [notesData, setnotesData] = React.useState(['Note 1', 'Note 2'])
 
-  
+  const [faultData, setfaultData] = React.useState(
+    {
+      faultheader: '',
+      faultdecsription: ''
+    }
+  )
+
+  function handleChange(event) {
+    const { name, value } = event.target
+    setfaultData((prevfaultData) => {
+      return {
+        ...prevfaultData,
+        [name]: value
+      }
+    })
+  }
+
+  function submitForm(event) {
+    event.preventDefault() 
+    console.log(faultData)
+}
 
   function addNote() {
     setnotesData((prevnotesData) => {
@@ -20,11 +40,16 @@ function App() {
   return (
     <div>
       <Split sizes={[30, 50]} direction="horizontal" className='split--container' >
-        <Notes 
-        notesData={notesData}
-        addNote={addNote}
+        <Notes
+          notesData={notesData}
+          addNote={addNote}
         />
-       <Editor />
+        <Editor
+          faultData={faultData}
+          setfaultData={setfaultData}
+          handleChange={handleChange}
+          submitForm={submitForm}
+        />
       </Split>
 
     </div>
