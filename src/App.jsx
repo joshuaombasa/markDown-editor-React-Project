@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
 
-  const [notesData, setnotesData] = React.useState(['Note 1', 'Note 2'])
+  const [notesData, setnotesData] = React.useState([])
 
   const [faultData, setfaultData] = React.useState(
     {
@@ -28,8 +28,12 @@ function App() {
 
   function submitForm(event) {
     event.preventDefault() 
-    console.log(faultData)
+    setnotesData((prevNotesData) => {
+      return [...prevNotesData, faultData]
+    })
 }
+
+
 
   function addNote() {
     setnotesData((prevnotesData) => {
@@ -39,7 +43,7 @@ function App() {
 
   return (
     <div>
-      <Split sizes={[30, 50]} direction="horizontal" className='split--container' >
+      <Split sizes={[40, 50]} direction="horizontal" className='split--container' >
         <Notes
           notesData={notesData}
           addNote={addNote}
