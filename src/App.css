@@ -7,12 +7,62 @@ body {
 .split--container {
   display: flex;
   height: 100vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.panel--1 {
-  background-color: aqua;
+.notes--container {
+  padding: 20px;
+ 
+}
+
+.notes--nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.add--note-btn {
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(120, 120, 206);
+  border: none;
 }
 
 .panel--2 {
   background-color: chartreuse;
+}
+
+.fault--container {
+  border: 1px solid rgb(77, 70, 70);
+  border-radius: 7px;
+  padding: 5px;
+  margin-top: 5px;
+  color: white;
+  background-color: rgb(44, 41, 41);
+}
+
+.fault-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.editor--container {
+  padding: 20px;
+}
+
+.editor--container input {
+  padding: 10px 20px;
+}
+
+.editor--container button {
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  background-color: rgb(120, 120, 206);
+  font-weight: bold;
+  border: none;
 }
