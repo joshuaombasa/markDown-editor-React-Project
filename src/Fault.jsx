@@ -1,8 +1,10 @@
-export default function Fault() {
+export default function Fault(props) {
+    console.log(props.notesData[0].faultdecsription)
     return (
         <section className="fault--container">
-            <h3 className="fault--head">Failed breaks</h3>
-            <p className="fault--desctiption">Users are reposrting faults when in highspeed, brakes dont work.</p>
+            <h3 className="fault--head">{props.notesData[0].faultheader}</h3>
+            <p className="fault--desctiption">{props.notesData[0].faultdecsription}</p>
         </section>
     )
 }
+
